@@ -1,0 +1,199 @@
+\documentclass[12pt,a4paper]{article}
+
+
+\usepackage{import}
+\usepackage{myheaderstuff}
+
+\usepackage[style=authoryear,date=year]{biblatex}
+
+
+
+\addbibresource{kunstkausinf_info.bib}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{center}
+{\Large \textsc{28532-FS2024-0:\\
+Die Kunst der kausalen Inferenz}}
+\end{center}
+\begin{center}
+Institut für Politikwissenschaft \\
+Department Sozialwissenschaften\\
+Universität Bern\\
+\end{center}
+%\date{September 26, 2014}
+
+\begin{center}
+\rule{\textwidth}{0.4pt}
+\begin{minipage}[t]{\textwidth}
+\medskip
+\begin{tabular}{lll}
+\textbf{Leitung} & Dr. G. Brückmann &  \medskip \\
+\textbf{Kontakt} & gracia.brueckmann@unibe.ch & \medskip\\
+\textbf{Sprechstunde} & Montag, 15:00-16:00 Uhr & \medskip\\
+\textbf{Büro} & Institutsgebäude vonRoll A 169 oder Sprechstunde per \href{https://unibe-ch.zoom.us/my/graciabrueckmann}{Zoom} & \medskip \\
+\textbf{Vorlesungszeit} & Dienstag, 10:15-11:55 Uhr & \medskip \\
+\textbf{Vorlesungssaal} &  Institutsgebäude vonRoll Hörraum B 101 & \medskip \\
+\textbf{ECTS} &  3 & \\ \smallskip
+\end{tabular} \medskip
+\end{minipage}
+\rule{\textwidth}{0.4pt}
+\end{center}
+\vspace{.2cm}
+\setlength{\unitlength}{1in}
+\renewcommand{\arraystretch}{2}
+
+
+\noindent\textbf{Kursbeschreibung} Das Ziel dieser Vorlesung ist es, die Studierenden für die Fragen von Kausalität (welches Ereignis führt \textit{kausal} zu welchem Ergebnis) zu sensibilisieren. Die Vorlesung vermittelt verschiedene Methoden, die in den empirischen Sozialwissenschaften und darüber hinaus angewandt werden, um kausale Effekte von statistischen Zusammenhängen (Korrelationen) zu trennen. Die Vorlesung führt Studierende in die Mechanismen hinter Verfahren wie (natürliche) Experimente, Instrumentalvariablen und doppelte Differenzenschätzer (\textit{difference-in-difference}) ein. Die Vorlesung nutzt Anwendungsbeispiele aus verschiedenen sozialwissenschaftlichen Bereichen, um das konzeptuelle Verständnis für diese Ansätze zu verbessern und erleichtern, während die breite Anwendbarkeit der Methodiken demonstriert wird.
+
+\vskip.15in
+
+\noindent\textbf{Lernziele}
+Studierende werden durch diese Vorlesung befähigt, bekannte Verfahren zur Aufdeckung von Kausalität zu benennen und ihre Grundprinzipien und Annahmen zu verstehen. Studierende lernen die Begriffe ``kausaler Effekt'' und ``ideales Experiment'' korrekt zu verwenden. Auch sind Sie in der Lage, zu beurteilen, wann Statistiken (Mittelwerte, Koeffizienten von Regressionsmodellen) als Schätzungen von kausalen Effekten interpretiert werden können und wann nicht. Studierende lernen überdies, Selektionsverzerrungen (\textit{selection bias}) zu definieren und zu erkennen. Sie erwerben die nötigen Fertigkeiten, um wissenschaftliche Studien akademische Artikel mit Regressionsmodellen und (quasi-)experimentellen Ansätzen zu lesen und kritisch zu diskutieren. Der Kurs sensibilisiert die Studierenden darin, wie ethische sowie offene und reproduzierbare empirische Forschung in den Sozialwissenschaften durchgeführt werden kann.\newline
+Im Speziellen werden Studierende in diese Methoden/Themen eingeführt: 
+\begin{itemize}
+\item Directed Acyclic Graphs (DAGs) 
+\item Randomisiert kontrollierte Studien (RCTs)
+\item (Multiple) Regressionen
+\item Instrumentalvariablenschätzer (IV)
+\item Panel Daten
+\item Doppelte Differenzenschätzer (Diff-in-Diff)
+\item Regressions-Diskontinuitäts-Analyse (RDD)
+\item Eventstudie
+\item Matching
+\item Synthetische Kontrollmethode
+\item Kausale Attribution in politischen Texten
+\item Validität
+\end{itemize}
+
+\vskip.15in
+\noindent\textbf{Ilias} 
+ \begin{enumerate}
+ \item \textbf{Alle} Kursinhalte, so wie \textbf{Ankündigungen}, Folien, Pflichtlektüre und weiterführende Infos/Materialien werden im Ilias zur Verfügung gestellt. Auch Podcast stehen dort zeitverzögert bereit.
+ 
+\item Dort befindet sich auch ein Forum, in dem sich die Teilnehmenden unter sich austauschen können. 
+\item  Bitte besuchen Sie den Ilias-Kurs regelmässig unter \url{https://ilias.unibe.ch/goto_ilias3_unibe_crs_2922497.html} 
+\end{enumerate}
+
+\vskip.15in
+\noindent\textbf{Optionale Lehrbücher}
+Für diese Vorlesung müssen Sie \textbf{kein} Lehrbuch leihen/kaufen, denn kein Lehrbuch bildet den Stoff komplett ab und/oder geht nicht darüber hinaus. Einzelne Kapitel aus folgenden Büchern können hilfreich sein; die ersten vier finden Sie komplett online:
+\begin{itemize}
+  \item \fullcite{huntington2021effect}. \url{https://theeffectbook.net}
+  \item \fullcite{cunningham2021causal}. \url{https://mixtape.scunning.com/} 
+  \item \fullcite{hernan2023causal}. \href{https://www.hsph.harvard.edu/miguel-hernan/wp-content/uploads/sites/1268/2024/01/hernanrobins_WhatIf_2jan24.pdf}{Link zum PDF} %\url{https://www.hsph.harvard.edu/miguel-hernan/wp-content/uploads/sites/1268/2024/01/hernanrobins_WhatIf_2jan24.pdf} 
+    \item \fullcite{huber2023causal}. 
+    \href{https://mitpress.ublish.com/ebook/causal-analysis-impact-evaluation-and-causal-machine-learning-with-applications-in-r-preview/12759/}{Link zum Buch} %\url{https://mitpress.ublish.com/ebook/causal-analysis-impact-evaluation-and-causal-machine-learning-with-applications-in-r-preview/12759/} 
+  \item \fullcite{llaudet2022data}.
+  \item \fullcite{angrist2014mastering}.
+\end{itemize}
+
+\newpage
+\noindent \textbf{Vorläufiger Semesterplan}
+\begin{itemize}
+    \item Der untenstehende Zeitplan ist vorläufig. Unerwartete Änderungen des Semesterplans werden in der Vorlesung und auf Ilias bekannt gegeben.
+    \item Nutzen Sie die Vorlesungen für Fragen, anhand derer Sie und alle Teilnehmenden für die Klausur profitieren können. 
+    \medskip 
+\item Die hier angegbenen Artikel (Pflichtlektüre) bitte vor der Vorlesung komplett (ohne Anhänge) durcharbeiten - es sei denn, es ist explizit anderes angegeben.
+\end{itemize}
+\vskip.15in
+\textsc{Session 1 \dotfill Einführung}\\
+{\color{darkgreen}{\Rectangle}} Was ist Kausalität? Wann brauchen wir kausale Inferenz?\\
+{\color{darkgreen}{\Rectangle}} Laptops in der Vorlesung? \fullcite{Carter2017-pb}
+\medskip  \\	
+\textsc{Session 2 \dotfill Einführung DAGs}  \\
+{\color{darkgreen}{\Rectangle}} Was sind DAGs? Wie helfen Sie uns Kausalität zu verstehen?\\
+{\color{darkgreen}{\Rectangle}} Korrelation und Kausalität? \fullcite{Rohrer2018-lw}
+\medskip  \\	
+\textsc{Session 3 \dotfill  RCTs}\\
+{\color{darkgreen}{\Rectangle}} (Warum) sind Experimente der Goldstandard? \\ 
+{\color{darkgreen}{\Rectangle}} Elektroautos testen und kaufen? \fullcite{bruckmann2022actualadoption} 
+\medskip  \\	
+\textsc{Session 4 \dotfill (Multiple) Regression}  \\
+{\color{darkgreen}{\Rectangle}} Wie geht (multiple) Regression? Wann helfen Regressionsmodelle? \\
+{\color{darkgreen}{\Rectangle}} Wie funktionieren Kontrollvariablen? \fullcite{Hunermund2023-vd} (\textit{fakultative Lektüre})
+\medskip  \\	
+\textsc{Session 5 \dotfill Instrumentalvariablenschätzer}  \\
+{\color{darkgreen}{\Rectangle}} Wie funktionieren IVs? Warum sind gute Instrumente schwer zu finden? \\
+{\color{darkgreen}{\Rectangle}} Gruppen, Angriffe und Vertrauen? \fullcite{Hager2019-jo} \medskip  \\	
+\textsc{Session 6 \dotfill Panel Daten}  \\
+{\color{darkgreen}{\Rectangle}} Was nutzen über die Zeit wiederholte Beobachtungen? Welche Methoden gibt es?\\
+{\color{darkgreen}{\Rectangle}} Telenovelas und Fertilität? \fullcite{Ferrara2012-sg}
+\medskip  \\	
+\textsc{Session 7 \dotfill RDD}  \\
+{\color{darkgreen}{\Rectangle}} Was ist die ``Regressions-Diskontinuitäts-Analyse''? Was sind ihre Stärken und Schwächen?\\
+{\color{darkgreen}{\Rectangle}} Vaterschaftszeit und Sexismus? \fullcite{Tavits2023-lm}
+\medskip  \\	
+\textsc{Session 8 \dotfill Kausale Attribution}  \\
+{\color{darkgreen}{\Rectangle}} Wann ist Gesagtes ein kausales Statement? \\  
+{\color{darkgreen}{\Rectangle}} \textsc{Gastvorlesung} Paulina Garcia Corral (Hertie School, Berlin) ``\textit{Causal Attribution in Political Texts}'' \medskip  \\	
+\textsc{Session 9 \dotfill Diff-in-Diff}  \\
+{\color{darkgreen}{\Rectangle}} Wie funktioniert der Doppelte-Differenzenschätzer? Und wann funktioniert er?\\
+{\color{darkgreen}{\Rectangle}} Gute Luft und ``dicke Luft''? \fullcite{Colantone2023-hz}
+\medskip  \\	
+\textsc{Session 10 \dotfill Eventstudien} \\
+{\color{darkgreen}{\Rectangle}} Wann Eventstudien nutzen? Können sie Kausalität aufdecken? \\
+{\color{darkgreen}{\Rectangle}} Kopf-an-Kopf-Rennen und Wahlbeteiligung? \fullcite{Bursztyn2023-rr}
+\medskip  \\
+\textsc{Session 11 \dotfill Matching}  \\
+{\color{darkgreen}{\Rectangle}} Wann matchen? Wie matchen?\\
+{\color{darkgreen}{\Rectangle}} Einsitzen und wählen? \fullcite{Gerber2017-xw}
+\medskip  \\	
+\textsc{Session 12 \dotfill Synthetische Kontrollmethode}  \\
+{\color{darkgreen}{\Rectangle}} Wann nutzen wir sie? Ist das nicht Diff-in-Diff oder Matching? \\
+{\color{darkgreen}{\Rectangle}} Förderalismus und Wohlfahrtsstaat? \fullcite{Arnold2017-mw} \medskip  \\
+\textsc{Session 13 \dotfill Validität}  \\
+{\color{darkgreen}{\Rectangle}} Was ist interne und externe Validität? Wie beinflusst das Studien und ihre Evaluation? \\
+{\color{darkgreen}{\Rectangle}} Dimensionen externer Validität? \fullcite{Egami2023-qp}
+ \medskip  \\	
+\textsc{Session 14 \dotfill Fragestunde}  \\
+{\color{darkgreen}{\Rectangle}} Beseitigung von Unklarheiten. Puffer.  \medskip  \\	
+	
+
+
+
+
+
+\noindent\textbf{Wichtige Termine}
+\begin{center} \begin{minipage}{4.5in}
+\textbf{Vorlesungsfrei}
+\begin{flushleft}
+\begin{flushleft}
+Osterferien \dotfill 02.04.2024\\
+\end{flushleft}
+\end{flushleft}
+\textbf{Prüfung}
+\begin{flushleft}
+Klausur \dotfill 03. 06. 2024 (10:15 - 11:45 Uhr) \\
+Nachtermin \dotfill 05. 09. 2024 (14:15 - 15:45 Uhr) \\
+\end{flushleft}
+\end{minipage}
+\end{center}
+
+
+\vskip.15in
+\noindent\textbf{Benotung}
+Diese Vorlesung wird mittels der Semesterabschlussklausur benotet. Wie üblich, werden 60\,\% der Punkte für das Bestehen der Klausur benötigt, damit Sie die \textbf{3 ECTS} erhalten.
+
+%\vskip.15in
+\newpage
+\noindent\textbf{Hinweise zur Sprechstunde} 
+\begin{itemize}
+    \item Bitte senden Sie mir eine Frage per Email (bis Freitagmittag, 12:30h) zu, in der Sie bitte kurz anhand der verfügbaren Materialien darlegen, worauf sich Ihre Frage bezieht.
+    \item Beachten Sie, das ich eventuell Ihre Frage in einer Vorlesung (nochmal) bespreche. 
+%    \item Bitte sehen Sie davon ab Fragen zu stellen, die sich durch die Lektüre dieses Syllabus oder der Informationen im Ilias beantworten. 
+\end{itemize}
+
+%\vskip.15in
+
+%EVTL RELEVANT
+%https://www.ipw.unibe.ch/studium/studienbetrieb/pruefungen/index_ger.html
+\noindent\textbf{Weitere Hinweise} Bitte konsultieren Sie für Fragen zur Studien- und Prüfungsorganisation das Institut, zum Beispiel unter \url{https://www.ipw.unibe.ch/studium/studienbetrieb/pruefungen/index_ger.html}.
+
+
+ \insert\footins{\footnotesize \noindent\textbf{Credits:}
+Dieser Syllabus basiert auf einem Template von Harish Guda \url{https://github.com/harish-guda/teaching-resources/blob/master/syllabus-template.pdf}.}
+
+
+
+%%%%%% THE END
+\end{document} 
