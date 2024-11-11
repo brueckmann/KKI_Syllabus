@@ -1,1 +1,1 @@
-LaTeX Code to reate the syllabus for my German causal inference lecture entitled "Die Kunst der kausalen Inferenz". 
+LaTeX Code to create the syllabus for causal inference lecture "Die Kunst der kausalen Inferenz". 
