@@ -39,8 +39,8 @@ jobs:
           git config --global user.email "drbrueckmann@proton.me"
           git config --global user.name "brueckmann"
           git pull
-          mv main.pdf Syllabus_KunstKausaleInferenz_FS2024_GBrueckmann.pdf
-          git add Syllabus_KunstKausaleInferenz_FS2024_GBrueckmann.pdf
+          mv main.pdf PDF_Syllabus_KKI_GBrueckmann.pdf
+          git add PDF_Syllabus_KKI_GBrueckmann.pdf
           git commit -m "now renamed"
           git push
         env:
