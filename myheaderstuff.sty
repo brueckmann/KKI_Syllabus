@@ -18,15 +18,22 @@
 %\renewcommand{\thefootnote}{\fnsymbol{footnote}}
 %\newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
 \pagestyle{fancyplain} 
-\fancyhf{}
+\fancyhf{} % Clear all fields
 \setlength{\headheight}{14.49998pt}
-\lhead{ \fancyplain{}{\textsc{28532-FS2024-0: Die Kunst der kausalen Inferenz}}}
+\lhead{\fancyplain{}{\textsc{28532-FS2024-0: Die Kunst der kausalen Inferenz}}}
 %\chead{ \fancyplain{}{} }
 \rhead{ \fancyplain{}{\textsc{G. Brückmann}}}
+\renewcommand{\headrulewidth}{0.4pt} % Header line for pages 2+
 \renewcommand{\footrulewidth}{0.4pt} % Untere Trennlinie
+\fancyfoot[L]{\today}              % Datum
 \fancyfoot[R]{Seite \thepage\ von \pageref{LastPage}}              % Seitennummer
-%\rfoot{\fancyplain{}{Seite \thepage\ von \pageref{LastPage}}}
 \thispagestyle{plain} %makes first page header free 
+% Redefine 'plain' style (used by \thispagestyle{plain} on page 1)
+\fancypagestyle{plain}{
+  \fancyhead{} % Clear header text on first page
+  \renewcommand{\headrulewidth}{0pt} % Remove header line on first page
+  % Note: Footer text and footrulewidth are automatically inherited from above
+}
 
 
 
