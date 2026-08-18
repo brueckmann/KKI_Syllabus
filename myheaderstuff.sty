@@ -13,6 +13,46 @@
 \definecolor{darkgreen}{rgb}{0,.6,0}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Define Document Title %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\renewcommand{\maketitle}{%
+\begin{center}
+{\Large \textsc{
+\CourseNumber\\
+\CourseTitle }}
+\end{center}
+\begin{center}
+\Institute  \\
+\Departement \\
+\University \\
+\end{center}
+\begin{center}
+\rule{\textwidth}{0.4pt}
+\begin{minipage}[t]{\textwidth}
+\medskip
+\begin{tabular}{lll}
+\textbf{Vorlesungszeit} & \DateTimeCourse  & \medskip \\
+\textbf{Vorlesungssaal} & \LocationCourse & \medskip \\
+\textbf{ECTS} &  3  \medskip \\ 
+\textbf{Leitung} & \lecturertitle~\@author &  \medskip \\
+\textbf{Kontakt} & \myemail{\lectureremail}{[\CourseAcronym]}{\lectureremail} & \medskip\\
+\textbf{Sprechstunde} & \DateTimeOfficeHours & \medskip\\
+\textbf{Büro} & \LocationOfficeHours & \medskip \\ 
+\textbf{Tip} &  Lesen Sie dieses Dokument in Gänze vor der 1. Vorlesung. & \medskip\\ % \smallskip
+\end{tabular} \medskip
+\end{minipage}
+\rule{\textwidth}{0.4pt}
+\end{center}
+\vspace{.2cm}
+\setlength{\unitlength}{1in}
+\renewcommand{\arraystretch}{2}
+}
+\makeatother
+
+
+
+
+
 \let\footnoterule\relax
 
 %\renewcommand{\thefootnote}{\fnsymbol{footnote}}
@@ -20,9 +60,10 @@
 \pagestyle{fancyplain} 
 \fancyhf{} % Clear all fields
 \setlength{\headheight}{14.49998pt}
-\lhead{\fancyplain{}{\textsc{28532-HS2026-0: Die Kunst der kausalen Inferenz}}}
-%\chead{ \fancyplain{}{} }
-\rhead{ \fancyplain{}{\textsc{G. Brückmann}}}
+\lhead{\fancyplain{}{\textsc{\CourseNumber: \CourseTitle}}}
+\makeatletter
+\rhead{\fancyplain{}{\textsc{\@author}}}
+\makeatother
 \renewcommand{\headrulewidth}{0.4pt} % Header line for pages 2+
 \renewcommand{\footrulewidth}{0.4pt} % Untere Trennlinie
 \fancyfoot[L]{\today}              % Datum
@@ -37,40 +78,40 @@
 
 
 
-%%%%%%%%%%%% LISTING %%%
-\usepackage{listings}
-\usepackage{caption}
-\DeclareCaptionFont{white}{\color{white}}
-\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
-\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
-%\usepackage{verbatim} % used to display code
-\usepackage{fancyvrb}
-\usepackage{acronym}
-\usepackage{amsthm}
-%\VerbatimFootnotes % Required, otherwise verbatim does not work in footnotes!
-\definecolor{OliveGreen}{cmyk}{0.64,0,0.95,0.40}
-\definecolor{CadetBlue}{cmyk}{0.62,0.57,0.23,0}
-\definecolor{lightlightgray}{gray}{0.93}
-\lstset{
-%language=bash,                          % Code langugage
-basicstyle=\ttfamily,                   % Code font, Examples: \footnotesize, \ttfamily
-keywordstyle=\color{OliveGreen},        % Keywords font ('*' = uppercase)
-commentstyle=\color{gray},              % Comments font
-numbers=left,                           % Line nums position
-numberstyle=\tiny,                      % Line-numbers fonts
-stepnumber=1,                           % Step between two line-numbers
-numbersep=5pt,                          % How far are line-numbers from code
-backgroundcolor=\color{lightlightgray}, % Choose background color
-frame=none,                             % A frame around the code
-tabsize=2,                              % Default tab size
-captionpos=t,                           % Caption-position = bottom
-breaklines=true,                        % Automatic line breaking?
-breakatwhitespace=false,                % Automatic breaks only at whitespace?
-showspaces=false,                       % Dont make spaces visible
-showtabs=false,                         % Dont make tabls visible
-columns=flexible,                       % Column format
-morekeywords={__global__, __device__},  % CUDA specific keywords
-}
+% %%%%%%%%%%%% LISTING %%%
+% \usepackage{listings}
+% \usepackage{caption}
+% \DeclareCaptionFont{white}{\color{white}}
+% \DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+% \captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+% %\usepackage{verbatim} % used to display code
+% \usepackage{fancyvrb}
+% \usepackage{acronym}
+% \usepackage{amsthm}
+% %\VerbatimFootnotes % Required, otherwise verbatim does not work in footnotes!
+% \definecolor{OliveGreen}{cmyk}{0.64,0,0.95,0.40}
+% \definecolor{CadetBlue}{cmyk}{0.62,0.57,0.23,0}
+% \definecolor{lightlightgray}{gray}{0.93}
+% \lstset{
+% %language=bash,                          % Code langugage
+% basicstyle=\ttfamily,                   % Code font, Examples: \footnotesize, \ttfamily
+% keywordstyle=\color{OliveGreen},        % Keywords font ('*' = uppercase)
+% commentstyle=\color{gray},              % Comments font
+% numbers=left,                           % Line nums position
+% numberstyle=\tiny,                      % Line-numbers fonts
+% stepnumber=1,                           % Step between two line-numbers
+% numbersep=5pt,                          % How far are line-numbers from code
+% backgroundcolor=\color{lightlightgray}, % Choose background color
+% frame=none,                             % A frame around the code
+% tabsize=2,                              % Default tab size
+% captionpos=t,                           % Caption-position = bottom
+% breaklines=true,                        % Automatic line breaking?
+% breakatwhitespace=false,                % Automatic breaks only at whitespace?
+% showspaces=false,                       % Dont make spaces visible
+% showtabs=false,                         % Dont make tabls visible
+% columns=flexible,                       % Column format
+% morekeywords={__global__, __device__},  % CUDA specific keywords
+% }
 
 
 \usepackage{etoolbox}
