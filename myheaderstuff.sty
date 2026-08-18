@@ -38,7 +38,7 @@
 \textbf{Kontakt} & \myemail{\lectureremail}{[\CourseAcronym]}{\lectureremail} & \medskip\\
 \textbf{Sprechstunde} & \DateTimeOfficeHours & \medskip\\
 \textbf{Büro} & \LocationOfficeHours & \medskip \\ 
-\textbf{Tip} &  Lesen Sie dieses Dokument in Gänze vor der 1. Vorlesung. & \medskip\\ % \smallskip
+\textbf{Tip} &  Lesen Sie dieses Dokument in Gänze vor der \hyperref[ses:1]{1. Vorlesung}. & \medskip\\ % \smallskip
 \end{tabular} \medskip
 \end{minipage}
 \rule{\textwidth}{0.4pt}
@@ -49,6 +49,20 @@
 }
 \makeatother
 
+%%%%%%%%%%%%%%%% Define Document Layout %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\section}[1]{\vskip.15in\noindent\textbf{#1}}
+\newcounter{sitzung}
+\renewcommand{\thesitzung}{\arabic{sitzung}}
+
+\newcommand{\Sitzung}[3]{%
+  \refstepcounter{sitzung}% increment counter (and allow referencing)
+    \label{ses:\thesitzung}% automatically create label like ses:1, ses:2, ...
+  \par\medskip\noindent
+  \textsc{Sitzung \thesitzung \dotfill #1}\par
+  \noindent{\color{darkgreen}{\Rectangle}} {#2}\par
+  \noindent{\color{darkgreen}{\Rectangle}} {#3}\par
+  \medskip
+}
 
 
 
