@@ -61,16 +61,16 @@ Für eine erfolgreiche Teilnahme an der Vorlesung \textit{Die Kunst der kausalen
 \begin{itemize}
 \item Directed Acyclic Graphs (\hyperref[ses:2]{DAGs})
 \item Randomisiert kontrollierte Studien (\hyperref[ses:3]{RCTs})
-\item (Multiple) Regressionen
+\item (Multiple) \hyperref[ses:4]{Regressionen} 
 \item Instrumentalvariablenschätzer (\hyperref[ses:5]{IVs})
-\item Panel Daten
-\item Doppelte Differenzenschätzer (Diff-in-Diffs)
-\item Regressions-Diskontinuitäts-Analyse (RDD)
+\item \hyperref[ses:6]{Panel} Daten
+\item Regressions-Diskontinuitäts-Analyse (\hyperref[ses:7]{RDD})
+\item Doppelte Differenzenschätzer (\hyperref[ses:8]{Diff-in-Diffs})
 % \item Eventstudie
-\item Matching
-\item Synthetische Kontrollmethode
+\item \hyperref[ses:10]{Matching} 
+\item Synthetische Kontrollmethode (\hyperref[ses:11]{SCM})
 % \item Kausale Attribution in politischen Texten
-\item Validität
+\item Interne und externe \hyperref[ses:12]{Validität} 
 \end{itemize}
 \end{itemize}
 
@@ -131,39 +131,46 @@ Für diese Vorlesung müssen Sie \textbf{kein} Lehrbuch leihen/kaufen, denn kein
 % {\color{darkgreen}{\Rectangle}} Was nutzen über die Zeit wiederholte Beobachtungen? Welche Methoden gibt es?\\
 % {\color{darkgreen}{\Rectangle}} Telenovelas und Fertilität? \fullcite{Ferrara2012-sg}
 % \medskip  \\	
-\textsc{Sitzung 7 \dotfill RDD}  \\
-{\color{darkgreen}{\Rectangle}} Was ist die ``Regressions-Diskontinuitäts-Analyse''? Was sind ihre Stärken und Schwächen?\\
-{\color{darkgreen}{\Rectangle}} Vaterschaftszeit und Sexismus? \fullcite{Tavits2023-lm}
-\medskip  \\	
+\Sitzung{RDD}{Was ist die ``Regressions-Diskontinuitäts-Analyse''? Was sind ihre Stärken und Schwächen?}{Vaterschaftszeit und Sexismus? \fullcite{Tavits2023-lm}}
+% \textsc{Sitzung 7 \dotfill RDD}  \\
+% {\color{darkgreen}{\Rectangle}} Was ist die ``Regressions-Diskontinuitäts-Analyse''? Was sind ihre Stärken und Schwächen?\\
+% {\color{darkgreen}{\Rectangle}} Vaterschaftszeit und Sexismus? \fullcite{Tavits2023-lm}
+% \medskip  \\	
 %\clearpage
-\textsc{Sitzung 8 \dotfill Diff-in-Diffs}  \\
-{\color{darkgreen}{\Rectangle}} Wie funktioniert der Doppelte-Differenzenschätzer? Und wann funktioniert er?\\
-{\color{darkgreen}{\Rectangle}} Gute Luft und ``dicke Luft''? \fullcite{Colantone2023-hz}
-\medskip  \\	
-\textsc{Sitzung 9 \dotfill Puffer}  \\
-{\color{darkgreen}{\Rectangle}} Haben Sie noch ein Wunschthema? Worüber wollen Sie noch mehr wissen?
-\\
-{\color{darkgreen}{\Rectangle}} \textit{tba.}
-\medskip  \\	
-\textsc{Sitzung 10 \dotfill Matching}  \\
-{\color{darkgreen}{\Rectangle}} Wann matchen? Wie matchen?\\
-{\color{darkgreen}{\Rectangle}} Einsitzen und wählen? \fullcite{Gerber2017-xw}
-\medskip  \\	
-\textsc{Sitzung 11 \dotfill Synthetische Kontrollmethode}  \\
-{\color{darkgreen}{\Rectangle}} Wann nutzen wir sie? Ist das nicht Diff-in-Diffs oder Matching? \\
-{\color{darkgreen}{\Rectangle}} Föderalismus und Wohlfahrtsstaat? \fullcite{Arnold2017-mw} \medskip  \\
-\textsc{Sitzung 12 \dotfill Validität}  \\
-{\color{darkgreen}{\Rectangle}} Was ist interne und externe Validität? Wie beeinflusst das Studien und ihre Evaluation? \\
-{\color{darkgreen}{\Rectangle}} Dimensionen externer Validität? \fullcite{Egami2023-qp}
- \medskip  \\	
- \textsc{Sitzung 13 \dotfill Kausale Attribution}  \\
-{\color{darkgreen}{\Rectangle}} Wann ist Gesagtes ein kausales Statement? \\  
-{\color{darkgreen}{\Rectangle}} 
-\fullcite{Garcia-Corral2025} (\textit{fakultative Lektüre})
+\Sitzung{Diff-in-Diffs}{Wie funktioniert der Doppelte-Differenzenschätzer? Und wann funktioniert er?}{Gute Luft und ``dicke Luft''? \fullcite{Colantone2023-hz}}
+% \textsc{Sitzung 8 \dotfill Diff-in-Diffs}  \\
+% {\color{darkgreen}{\Rectangle}} Wie funktioniert der Doppelte-Differenzenschätzer? Und wann funktioniert er?\\
+% {\color{darkgreen}{\Rectangle}} Gute Luft und ``dicke Luft''? \fullcite{Colantone2023-hz}
+% \medskip  \\	
+\Sitzung{Puffer}{Haben Sie ein Wunschthema? Worüber wollen Sie noch mehr wissen?}{\textit{tba.}}
+% \textsc{Sitzung 9 \dotfill Puffer}  \\
+% {\color{darkgreen}{\Rectangle}} Haben Sie noch ein Wunschthema? Worüber wollen Sie noch mehr wissen?
+% \\
+% {\color{darkgreen}{\Rectangle}} \textit{tba.}
+% \medskip  \\	
+\Sitzung{Matching}{Wann matchen? Wie matchen?}{Einsitzen und wählen? \fullcite{Gerber2017-xw}}
+% \textsc{Sitzung 10 \dotfill Matching}  \\
+% {\color{darkgreen}{\Rectangle}} Wann matchen? Wie matchen?\\
+% {\color{darkgreen}{\Rectangle}} Einsitzen und wählen? \fullcite{Gerber2017-xw}
+% \medskip  \\	
+\Sitzung{Synthetische Kontrollmethode}{Wann nutzen wir sie? Ist das nicht Diff-in-Diffs oder Matching?}{Föderalismus und Wohlfahrtsstaat? \fullcite{Arnold2017-mw}}
+% \textsc{Sitzung 11 \dotfill Synthetische Kontrollmethode}  \\
+% {\color{darkgreen}{\Rectangle}} Wann nutzen wir sie? Ist das nicht Diff-in-Diffs oder Matching? \\
+% {\color{darkgreen}{\Rectangle}} Föderalismus und Wohlfahrtsstaat? \fullcite{Arnold2017-mw} \medskip  \\
+\Sitzung{Validität}{Was ist interne und externe Validität? Wie beeinflusst das Studien und ihre Evaluation?}{Dimensionen externer Validität? \fullcite{Egami2023-qp}}
+% \textsc{Sitzung 12 \dotfill Validität}  \\
+% {\color{darkgreen}{\Rectangle}} Was ist interne und externe Validität? Wie beeinflusst das Studien und ihre Evaluation? \\
+% {\color{darkgreen}{\Rectangle}} Dimensionen externer Validität? \fullcite{Egami2023-qp}
+ % \medskip  \\	
+ \Sitzung{Kausale Attribution}{Wann ist Gesagtes ein kausales Statement?}{\fullcite{Garcia-Corral2025} (\textit{fakultative Lektüre})}
+%  \textsc{Sitzung 13 \dotfill Kausale Attribution}  \\
+% {\color{darkgreen}{\Rectangle}} Wann ist Gesagtes ein kausales Statement? \\  
+% {\color{darkgreen}{\Rectangle}} 
+% \fullcite{Garcia-Corral2025} (\textit{fakultative Lektüre})
 %\textsc{Gastvorlesung} Paulina Garcia Corral (Hertie School, Berlin) ``\textit{Causal Attribution in Political Texts}'' \medskip  \\	
-
-\textsc{Sitzung 14 \dotfill Fragestunde}  \\
-{\color{darkgreen}{\Rectangle}} Beseitigung von Unklarheiten.  \medskip  \\	
+\Sitzung{Fragestunde}{Beseitigung von Unklarheiten.}{\textit{tba.}}
+% \textsc{Sitzung 14 \dotfill Fragestunde}  \\
+% {\color{darkgreen}{\Rectangle}} Beseitigung von Unklarheiten.  \medskip  \\	
 	
 
 
