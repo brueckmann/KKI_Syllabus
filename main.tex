@@ -4,8 +4,64 @@
 \usepackage{import}
 \usepackage{myheaderstuff}
 
-\usepackage[style=authoryear,date=year]{biblatex}
+% \usepackage[style=authoryear,date=year]{biblatex}
+% \addbibresource{kunstkausinf_info.bib}
+
+
+\usepackage[backend=biber,
+style=authoryear, 
+doi=true,
+url=false,
+isbn=false,
+date=year]{biblatex}
 \addbibresource{kunstkausinf_info.bib}
+
+% Prefer biblatex native textcite over natbib's \citet to avoid spacing issues in Beamer:
+\AtBeginDocument{%
+\let\citet\textcite
+\let\citep\parencite
+}
+
+\DeclareBibliographyCategory{fullcited}
+\newcommand{\mybibexclude}[1]{\addtocategory{fullcited}{#1}}
+\newcommand{\fullcitenobib}[1]{\fullcite{#1}\mybibexclude{#1}} 
+
+% The large gap is caused by spurious spaces introduced by end-of-line tokens inside your \AtEveryCitekey{...} definition. In TeX, an unprotected line end becomes a space token; when that happens inside citation hooks it may produce visible gaps (especially in Beamer). The fix is to terminate lines with % where appropriate.
+%%% IT IS IMPORTANT TO end lines with % 
+\AtEveryBibitem{%
+\clearfield{language}%
+\clearlist{language}%
+}
+
+
+
+% Source - https://tex.stackexchange.com/a/175534
+% Posted by Ramashalanka, modified by community. See post 'Timeline' for change history
+% Retrieved 2026-09-15, License - CC BY-SA 3.0
+
+\AtEveryCitekey{%
+  \UseBibitemHook% <- prevent an end-of-line space here
+}%
+
+% Source - https://tex.stackexchange.com/a/424775
+% Posted by samcarter_is_at_topanswers.xyz, modified by community. See post 'Timeline' for change history
+% Retrieved 2026-09-15, License - CC BY-SA 3.0
+
+% print url if no doi
+\renewbibmacro*{doi+eprint+url}{%
+    \printfield{doi}%
+    \newunit\newblock%
+    \iftoggle{bbx:eprint}{%
+        \usebibmacro{eprint}%
+    }{}%
+    \newunit\newblock%
+    \iffieldundef{doi}{%
+        \usebibmacro{url+urldate}}%
+        {}%
+    }
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DEFINE COURSE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -115,7 +171,7 @@ Für diese Vorlesung müssen Sie \textbf{kein} Lehrbuch leihen/kaufen, denn kein
 % {\color{darkgreen}{\Rectangle}}  \\
 % {\color{darkgreen}{\Rectangle}} \textit{tba.}
 % \medskip  \\	
-\Sitzung{RCTs}{(Warum) sind Experimente der Goldstandard?}{\textit{tba.}}
+\Sitzung{RCTs}{(Warum) sind Experimente der Goldstandard?}{\fullcite{Bruckmann2026c}}
 \Sitzung{(Multiple) Regression}{(Wie) helfen Kontrollvariablen in (multiplen) Regressionsmodelle Kausalität aufzudecken?}{\textit{tba.}}
 % \textsc{Sitzung 4 \dotfill (Multiple) Regression}  \\
 % {\color{darkgreen}{\Rectangle}} (Wie) helfen Kontrollvariablen in (multiplen) Regressionsmodelle Kausalität aufzudecken? \\
@@ -131,6 +187,7 @@ Für diese Vorlesung müssen Sie \textbf{kein} Lehrbuch leihen/kaufen, denn kein
 % {\color{darkgreen}{\Rectangle}} Was nutzen über die Zeit wiederholte Beobachtungen? Welche Methoden gibt es?\\
 % {\color{darkgreen}{\Rectangle}} Telenovelas und Fertilität? \fullcite{Ferrara2012-sg}
 % \medskip  \\	
+\clearpage
 \Sitzung{RDD}{Was ist die ``Regressions-Diskontinuitäts-Analyse''? Was sind ihre Stärken und Schwächen?}{Vaterschaftszeit und Sexismus? \fullcite{Tavits2023-lm}}
 % \textsc{Sitzung 7 \dotfill RDD}  \\
 % {\color{darkgreen}{\Rectangle}} Was ist die ``Regressions-Diskontinuitäts-Analyse''? Was sind ihre Stärken und Schwächen?\\
@@ -179,7 +236,7 @@ Für diese Vorlesung müssen Sie \textbf{kein} Lehrbuch leihen/kaufen, denn kein
 
 \section{Wichtige Termine}
 \begin{center} %\begin{minipage}{4.5in}
-\begin{minipage}{11cm}
+\begin{minipage}{14cm}
 % \textbf{Vorlesungsfrei}
 % \begin{flushleft}
 % \begin{flushleft}
@@ -191,7 +248,7 @@ Für diese Vorlesung müssen Sie \textbf{kein} Lehrbuch leihen/kaufen, denn kein
 Anmeldung (via KSL) \dotfill 15. 11. - 31. 12. 2026\\
 Prüfung \dotfill 26. 01. 2027 10:15 - 11:45 Uhr \\
 Anmeldung (via KSL) \dotfill 01. 04. - 15. 05. 2027\\
-Nachtermin  \dotfill \textit{voraussichtlich 1./2. Woche Sommersemesterferien 2027}\\ %05. 09. 2024 (14:15 - 15:45 Uhr) \\
+Nachtermin  \dotfill \textit{voraussichtlich 1./2. Woche der Sommersemesterferien 2027}\\ %05. 09. 2024 (14:15 - 15:45 Uhr) \\
 \end{flushleft}
 \end{minipage}
 \end{center}
